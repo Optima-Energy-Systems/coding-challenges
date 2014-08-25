@@ -3,11 +3,11 @@ using System.IO;
 
 namespace RobotWars
 {
-    /**
-     * Responsible for reading an input source, setting up the
-     * grid limits and robot initial positions, and passing each
-     * robot its moves.
-     */
+    /// <summary>
+    /// Responsible for reading an input source, setting up the
+    /// grid limits and robot initial positions, and passing each
+    /// robot its moves.
+    /// </summary>
     public class InputParser
     {
         private TextReader input;

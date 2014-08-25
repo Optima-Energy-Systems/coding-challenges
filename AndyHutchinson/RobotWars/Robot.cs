@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace RobotWars
 {
-    /**
-     * A robot has a x/y position and a direction and can be
-     * told to move (either L/R rotations or M - forwards).
-     */ 
+    /// <summary>
+    /// A robot has a x/y position and a direction and can be
+    /// told to move (either L/R rotations or M - forwards).
+    /// </summary>
     public class Robot
     {
         /** Current x position */

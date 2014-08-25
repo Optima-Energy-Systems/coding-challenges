@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace RobotWars
 {
-    /**
-     * Represents either north, east, south or west. Each direction
-     * knows its neighbours and knows how to move in its own direction.
-     */
+    /// <summary>
+    /// Represents either north, east, south or west. Each direction
+    /// knows its neighbours and knows how to move in its own direction.
+    /// </summary>
     public class Direction
     {
         /** Letter identifying direction, either N/E/S/W. */

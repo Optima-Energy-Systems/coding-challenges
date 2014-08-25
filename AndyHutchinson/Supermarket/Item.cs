@@ -6,6 +6,11 @@ using System.Threading.Tasks;
 
 namespace Supermarket
 {
+    /// <summary>
+    /// An Item always has an sku and a price, and may have a 
+    /// special offer, in which case it will also have a 
+    /// specialOfferMultiple and specialOfferPrice.
+    /// </summary>
     public class Item
     {
         private string sku;

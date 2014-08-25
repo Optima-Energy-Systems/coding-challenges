@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Supermarket
 {
+    /// <summary>
+    /// Simple dictionary based store of items.
+    /// </summary>
     public class ItemRepository
     {
         private Dictionary<string, Item> itemsBySku = new Dictionary<string, Item>();

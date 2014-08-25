@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Supermarket
 {
+    /// <summary>
+    /// A checkout is aware of a set of items, and can scan items
+    /// and compute the total price for them, including any offers.
+    /// </summary>
     public class Checkout
     {
         Dictionary<string, int> itemCountsBySku = new Dictionary<string, int>();
