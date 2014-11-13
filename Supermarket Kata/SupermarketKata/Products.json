@@ -1,0 +1,22 @@
+﻿[
+    {
+        "SKU": "A",
+        "UnitPrice": 50,
+        "SpecialPriceThreshold": 3,
+        "SpecialPrice": 130
+    },
+    {
+        "SKU": "B",
+        "UnitPrice": 30,
+        "SpecialPriceThreshold": 2,
+        "SpecialPrice": 45
+    },
+    {
+        "SKU": "C",
+        "UnitPrice": 20
+    },
+    {
+        "SKU": "D",
+        "UnitPrice": 15
+    }
+]

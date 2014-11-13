@@ -1,6 +1,5 @@
-/Robot Wars/TestResults
-
 obj
-
 bin
-/Robot Wars/*.suo
+/Robot Wars/TestResults
+/Supermarket Kata/TestResults
+*.suo
