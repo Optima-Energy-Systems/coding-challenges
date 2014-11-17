@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Checkout
+{
+    class CheckOut : ICheckOut
+    {
+
+        Dictionary<string, int> itemList;
+        Dictionary<string, Offer> offerList;
+
+
+        public CheckOut()
+        {
+            itemList = new Dictionary<string, int>();
+            offerList= new Dictionary<string,Offer>();
+
+            //the detail below should come from database but here I am simulating it by adding them here
+            offerList.Add("A", new Offer(3,130,50));
+            offerList.Add("B", new Offer(2,45, 30));
+            offerList.Add("C", new Offer(1, 20, 20));
+            offerList.Add("D", new Offer(1, 15, 15));
+
+        }
+        public void Scan(string item)
+        {
+            if (itemList.ContainsKey(item))
+            {
+                itemList[item] = itemList[item] + 1;
+            }
+            else
+            {
+                itemList.Add(item, 1);
+            }
+
+        }
+        public int GetTotalPrice()
+        {
+            string[] keys = itemList.Keys.ToArray();
+            int TotalPrice=0;
+
+            for (int i = 0; i < keys.Length ; i++)
+            {
+                int quantity = itemList[keys[i]];
+                int price=0;
+                Offer itemOffer = offerList[keys[i]];
+                price = ((int)(quantity / itemOffer.offerQuantity)) * itemOffer.offerPrice;
+                price = price + ((quantity % itemOffer.offerQuantity)) * itemOffer.unitPrice;
+                TotalPrice = TotalPrice + price;
+                Console.WriteLine("Product " + keys[i] + "  Quantity  " + itemList[keys[i]]  + " at Price " + price);
+            }
+            
+            
+            return TotalPrice ;
+        }
+
+
+
+    }
+}
