@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Checkout
+{
+    class Offer
+    {
+        public int offerQuantity;
+        public int offerPrice;
+        public int unitPrice;
+
+        public Offer(int productOfferQuantity, int productOfferPrice, int productUnitPrice)
+        {
+            offerQuantity = productOfferQuantity;
+            offerPrice = productOfferPrice;
+            unitPrice = productUnitPrice;
+        }
+
+    }
+}
