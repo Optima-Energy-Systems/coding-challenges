@@ -3,28 +3,51 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Checkout
+namespace RobotWar
 {
     class Program
     {
         static void Main(string[] args)
         {
-            CheckOut newCustomerBasket = new CheckOut();
+            try
+            {
 
-            //simulating a scan manually below;
-            newCustomerBasket.Scan("A");
-            newCustomerBasket.Scan("B");
-            newCustomerBasket.Scan("A");
-            newCustomerBasket.Scan("B");
-            newCustomerBasket.Scan("A");
-            newCustomerBasket.Scan("B");
-            newCustomerBasket.Scan("A");
+                Console.Write("Enter the grid top coordinates:");
+                String commandLineInput = Console.ReadLine();
+                
+                Console.Write("Enter the number of robots:");
+                int numRobots = Convert.ToInt16(Console.ReadLine());
 
-           Console.WriteLine("  Total  " + newCustomerBasket.GetTotalPrice());
+                Dictionary <int, Robot>  robotList = new Dictionary<int, Robot>();
 
-           Console.WriteLine(" Press any key to exit ");
+                for (int i = 1; i <= numRobots; i++)
+                {
+                    Console.Write("Enter the Robo" + i + " position:");
+                    char[] roboPosition = ((String)Console.ReadLine()).ToCharArray();
+                    Console.Write("Enter the Commands:");
+                    char[] roboCommands = ((String)Console.ReadLine()).ToCharArray();
+                    Robot newRobot = new Robot();
+                    newRobot.xGrid = Convert.ToInt16(roboPosition[0].ToString());
+                    newRobot.yGrid = Convert.ToInt16(roboPosition[1].ToString());
+                    newRobot.facingPosition = Convert.ToString(roboPosition[2].ToString());
+                    newRobot.commands = roboCommands;
+                    robotList.Add(i, newRobot);
+                }
 
-            string x = Console.ReadLine();
+                for (int i = 1; i <= numRobots; i++)
+                {
+                    Console.WriteLine ("Robot " + i + " current Position is " + robotList[i].getFinalPosition());
+
+                }
+               
+                Console.WriteLine("Press a key to exit");
+                String readKey = Console.ReadLine();
+            }
+            catch(Exception e){
+                //exception handling needs to be done.
+            }
+
+
         }
     }
 }
