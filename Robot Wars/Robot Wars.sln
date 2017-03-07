@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26206.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotWars.Console", "src\RobotWars.Console\RobotWars.Console.csproj", "{9DA6143B-63D3-4906-A35C-215EC9503F51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotWars.Implementation", "src\RobotWars.Implementation\RobotWars.Implementation.csproj", "{DB27F16D-5CB8-4209-B0F2-598B818E35B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotWars.Implementation.Test", "tests\RobotWars.Implementation.Test\RobotWars.Implementation.Test.csproj", "{02E04004-E6F1-4141-9773-55479EC1302E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotWars.Interface", "src\RobotWars.Interface\RobotWars.Interface.csproj", "{42F70F3C-0EB0-424B-84C8-CB9010239FDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotWars.Console.Test", "tests\RobotWars.Console.Test\RobotWars.Console.Test.csproj", "{02C68E40-1E0E-4507-B998-F5FD47E5F5F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DA6143B-63D3-4906-A35C-215EC9503F51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DA6143B-63D3-4906-A35C-215EC9503F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DA6143B-63D3-4906-A35C-215EC9503F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DA6143B-63D3-4906-A35C-215EC9503F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB27F16D-5CB8-4209-B0F2-598B818E35B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB27F16D-5CB8-4209-B0F2-598B818E35B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB27F16D-5CB8-4209-B0F2-598B818E35B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB27F16D-5CB8-4209-B0F2-598B818E35B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02E04004-E6F1-4141-9773-55479EC1302E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02E04004-E6F1-4141-9773-55479EC1302E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02E04004-E6F1-4141-9773-55479EC1302E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02E04004-E6F1-4141-9773-55479EC1302E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42F70F3C-0EB0-424B-84C8-CB9010239FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42F70F3C-0EB0-424B-84C8-CB9010239FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42F70F3C-0EB0-424B-84C8-CB9010239FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42F70F3C-0EB0-424B-84C8-CB9010239FDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02C68E40-1E0E-4507-B998-F5FD47E5F5F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02C68E40-1E0E-4507-B998-F5FD47E5F5F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02C68E40-1E0E-4507-B998-F5FD47E5F5F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02C68E40-1E0E-4507-B998-F5FD47E5F5F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

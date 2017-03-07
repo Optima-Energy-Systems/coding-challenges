@@ -1,7 +1,7 @@
 Robot Wars
 ==========
 
-Using either C# or F# and a TDD approach, spent no more than two hours on your solution. There should be an emphasis on [clean coding principles](Assets/Clean-Code-V2.4.pdf).
+Using either C# or F# and a TDD approach, spend no more than two hours on your solution. There should be an emphasis on [clean coding principles](Assets/Clean-Code-V2.4.pdf).
 
 ## Requirements
 
