@@ -1,0 +1,94 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace RobotWar
+{
+    class Robot
+    {
+        public int xGrid;
+        public int yGrid;
+        public String facingPosition;
+        public char[] commands;
+
+        private readonly Dictionary<int, string> AngleToFacingPositionMAP
+        = new Dictionary<int, string>
+        {
+            {0, "N"},
+            {1, "E"},
+            {2, "S"},
+            {3, "W"},
+
+        };
+
+        private readonly Dictionary<string, int> FacingPostionToAngleMAP
+        = new Dictionary<string, int>
+        {
+            {"N", 0},
+            {"E", 1},
+            {"S", 2},
+            {"W", 3},
+
+        };
+
+        public String getFinalPosition()
+        {
+            int currentPosition = FacingPostionToAngleMAP[facingPosition];
+            for (int i = 0; i < commands.Length; i++)
+            {
+                switch (commands[i])
+                {
+                    case 'R':
+                        currentPosition++;
+                        break;
+                    case 'L':
+                        currentPosition = currentPosition + 3;
+                        break;
+                    case 'M':
+                        SetGridPostion(currentPosition);
+                        break;
+
+                    default:
+                        break;
+                }
+                if (currentPosition > 3)
+                {
+                    currentPosition = currentPosition % 4;
+                }
+
+            }
+
+            StringBuilder output = new StringBuilder(3);
+            output.Append(xGrid);
+            output.Append(yGrid);
+            output.Append(AngleToFacingPositionMAP[currentPosition]);
+            return output.ToString();
+        }
+
+        void SetGridPostion(int currentPosition){
+
+            String currentfactingPostion = AngleToFacingPositionMAP[currentPosition];
+            switch (currentfactingPostion)
+            {
+                case "N":
+                    yGrid++;
+                    break;
+                case "S":
+                    yGrid--;
+                    break;
+                case "E":
+                    xGrid++;
+                    break;
+                case "W":
+                    xGrid--;
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+
+    }
+}
