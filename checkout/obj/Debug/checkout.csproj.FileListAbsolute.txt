@@ -1,0 +1,6 @@
+C:\Users\CakeF\OneDrive\coding challenges\shop\checkout\bin\Debug\checkout.exe.config
+C:\Users\CakeF\OneDrive\coding challenges\shop\checkout\bin\Debug\checkout.exe
+C:\Users\CakeF\OneDrive\coding challenges\shop\checkout\bin\Debug\checkout.pdb
+C:\Users\CakeF\OneDrive\coding challenges\shop\checkout\obj\Debug\checkout.csprojResolveAssemblyReference.cache
+C:\Users\CakeF\OneDrive\coding challenges\shop\checkout\obj\Debug\checkout.exe
+C:\Users\CakeF\OneDrive\coding challenges\shop\checkout\obj\Debug\checkout.pdb
