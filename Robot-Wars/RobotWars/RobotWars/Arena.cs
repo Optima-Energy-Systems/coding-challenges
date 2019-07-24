@@ -18,12 +18,12 @@ namespace RobotWars
             var rawNumbers = rawInputArenaSize.Split(' ');
             height = int.Parse(rawNumbers[0]);
             width = int.Parse(rawNumbers[1]);
-            int ArenaSize = height * width;
+            int arenaSize = height * width;
 
             Console.WriteLine("Height is " + height + " and Width is " + width);
-            //Console.WriteLine("Height and width are " + height.GetType()  + " and " +width.GetType());
-            char[] arena = new char[ArenaSize];
-            for (int i = 0; i < ArenaSize; i++)
+            
+            char[] arena = new char[arenaSize];
+            for (int i = 0; i < arenaSize; i++)
             {
                 arena[i] = 'A';
 
