@@ -98,7 +98,7 @@ namespace RobotWars
                 }
             }
             //feedback from heading:
-            Console.WriteLine(heading);    
+            Console.WriteLine("Final heading is: " + heading);    
             
             //computing movement
             
