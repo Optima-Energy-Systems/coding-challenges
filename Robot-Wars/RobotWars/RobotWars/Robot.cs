@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using RobotWars.Arena;
 
 namespace RobotWars
 {
@@ -101,6 +103,17 @@ namespace RobotWars
             Console.WriteLine("Final heading is: " + heading);    
             
             //computing movement
+            //arena height and width will be the boundaries by using mod division
+            //for instance, element 6 in a 5x5 array will have as virtual coordinates
+            //x= index / 5   and   y = index % 5
+            Arena arena = new Arena();
+            for (int i = 0; i < rawMoveSequenceCapture.Length; i++)
+            {
+                if (rawMoveSequenceCapture[0] == 'M')
+                {
+                    
+                }
+            }
             
             Console.ReadLine();
         }

@@ -22,12 +22,16 @@ namespace RobotWars
 
             Console.WriteLine("Height is " + height + " and Width is " + width);
             
+            //building arena:
             char[] arena = new char[arenaSize];
             for (int i = 0; i < arenaSize; i++)
             {
                 arena[i] = 'A';
 
             }
+            //initialize robots position by making the char in pos 0,0
+            //different to others from the array.
+            //to be reviewed if unnecessary
             arena[0] = '1';
 
             for (int i = 0; i < arena.Length; i++)
