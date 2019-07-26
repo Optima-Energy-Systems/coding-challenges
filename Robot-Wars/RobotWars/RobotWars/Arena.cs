@@ -8,45 +8,67 @@ namespace RobotWars
 {
     public class Arena
     {
-        private readonly int height;
-        private readonly int width;
+        int height;
+        int width;
 
         public Arena ()
         {
             Console.WriteLine("First thing first. Let's establish the Arena size, height and weight, one number for each, separated by a space");
             string rawInputArenaSize = Console.ReadLine();
             var rawNumbers = rawInputArenaSize.Split(' ');
-            height = int.Parse(rawNumbers[0]);
-            width = int.Parse(rawNumbers[1]);
+            
+            try
+            {
+                width = int.Parse(rawNumbers[0]);
+                height = int.Parse(rawNumbers[1]);
+            }
+            catch(FormatException exception)
+            {
+                Console.WriteLine("Let's try again. \nEnter height and weight, one number for each, separated by a space");
+            }
+            
             int arenaSize = height * width;
 
             Console.WriteLine("Height is " + height + " and Width is " + width);
             
             //building arena:
-            char[] arena = new char[arenaSize];
-            for (int i = 0; i < arenaSize; i++)
+            char[,] arena = new char[width, height];
+
+            for (int i = 0; i < width; i++)
             {
-                arena[i] = 'A';
+                for (int j = 0; j < height; j++)
+                {
+                    arena[i,j] = 'A';
+
+                }
 
             }
+
             //initialize robots position by making the char in pos 0,0
             //different to others from the array.
             //to be reviewed if unnecessary
-            arena[0] = '1';
+            //arena[0,0] = '1';
 
-            for (int i = 0; i < arena.Length; i++)
+
+            //checking the array
+            for (int i = 0; i < arena.GetUpperBound(0); i++)
             {
-                Console.Write(arena[i]);
+                for (int j = 0; j < arena.GetUpperBound(1); j++)
+                {
+                    Console.WriteLine(arena[i,j]);
+                }
             }
 
             Console.WriteLine(arena.Length);
-            Console.WriteLine(Array.IndexOf(arena, '1'));
+            //Console.WriteLine(Array.IndexOf(arena, '1'));
 
 
 
             Console.ReadLine();
 
         }
+
+       
         
 
     }

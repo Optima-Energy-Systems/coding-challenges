@@ -15,7 +15,6 @@ namespace RobotWarsTests
         public void CheckArenaSize()
         {
             Arena arena = new Arena();
-            Assert.AreEqual(5, Arena.)
         }
        
         [Test]
